@@ -49,14 +49,14 @@ void loop() {
 
   Serial.println("CONNECTED");
 
-  /*bool opt = PS4.Options();
+  bool opt = PS4.Options();
   bool sha = PS4.Share();
 
   if (opt && !lastOpt) autoMode = false;
   if (sha && !lastSha) autoMode = true;
 
   lastOpt = opt;
-  lastSha = sha;*/
+  lastSha = sha;
   bool share = PS4.Share();
 static bool lastShare = false;
 
@@ -68,7 +68,7 @@ if (share && !lastShare) {
 
 lastShare = share;
 
- /*if(PS4.Share())
+ if(PS4.Share())
   {
  mode_state = auto ;
   }
@@ -78,7 +78,7 @@ lastShare = share;
  /*bool share = PS4.Share();
  static bool lastshare = false ;
  if(share && !lastshare)
- autoMode = !autoMode ;*/
+ autoMode = !autoMode ;
 
   // AUTO
   if (autoMode) {
